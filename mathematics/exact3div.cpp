@@ -6,7 +6,7 @@ int exactly3Divisors(int N){
     int ans = 0;
     for(int i=4; i<=N; i++){
         int count = 0;
-        for(int j=sqrt(i)+1; j<i; j++){
+        for(int j=sqrt(i); j<i; j++){
             if(i%j==0)
                 count++;
         }

@@ -2,7 +2,6 @@
 #include<math.h>
 using namespace std;
 int ans(int inp, int x){
-    cout<<"count="<<1<<" ";
     if(inp==x){
         cout<<"Congrats"<<endl;
         return 1;

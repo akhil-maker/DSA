@@ -10,7 +10,7 @@ int sqrtNum(int n){
     }
     return -1;
 }
-//O()
+//O(log n)
 int sqrtNum1(int n){
     if(n==0 || n==1)
         return n;

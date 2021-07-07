@@ -1,13 +1,13 @@
 #include<iostream>
 using namespace std;
-// linear search 
+// linear search O(n)
 int search(int a[], int n, int x){
     for(int i=0; i<n; i++)
         if(a[i]==x)
             return i+1;
     return -1;
 }
-//binary search
+//binary search O(log n)
 int search(int a[], int low, int high, int x){
     int mid;
     while(low<high){
