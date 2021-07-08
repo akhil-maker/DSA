@@ -44,6 +44,39 @@ void rotateArr3(int a[], int n, int k){
     for(int i=0; i<n; i++)
         cout<<a[i]<<" ";
 }
+int gcd(int a, int b){
+    if(b==0)
+        return a;
+    return gcd(b, a%b);
+}
+void rotate4(int a[], int n, int k){
+    k = k%n;
+    int d = gcd(k, n);
+    cout<<endl<<"Swap print:"<<endl;
+    // for(int i=0; i<n-d; i++){
+    //     swap(a[i], a[i+d]);
+    //     for(int i=0; i<n; i++)
+    //         cout<<a[i]<<" ";
+    //     cout<<endl;
+    // }
+    for(int i=0; i<d; i++){
+        int temp = a[i];
+        int j=i;
+        while(1){
+            int t = j+k;
+            if(t>=n)
+                t = t-n;
+            if(t==i)
+                break;
+            a[j] = a[t];
+            j = t;
+        }
+        a[j] = temp;
+    }
+    cout<<endl;
+    for(int i=0; i<n; i++)
+        cout<<a[i]<<" ";
+}
 int main(){
     int a[] = {1, 2, 3, 4, 5, 6, 7};
     int n=7, k=1;
@@ -54,4 +87,7 @@ int main(){
     int c[] = {1, 2, 3, 4, 5, 6, 7};
     n = 7, k = 3;
     rotateArr3(c, n, k);
+    int d[] = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12};
+    n = 7, k = 3;
+    rotate4(d, n, k);
 }

@@ -6,6 +6,8 @@ bool isPrime(int n){
             return true;
     return false;
 }
+
+//O(n*log(log n))
 bool isPrime2(int n){
     bool prime[n+1];
     for(int i=0; i<=n; i++)
