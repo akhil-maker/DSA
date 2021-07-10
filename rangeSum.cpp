@@ -5,6 +5,8 @@ int rangeSum(int a[], int s, int e, int n){
         a[i] = a[i]+a[i-1];
     for(int i=0; i<n; i++)
         cout<<a[i]<<" ";
+    if(s>e)
+        return 0;
     return a[e-1]-a[s-1];
 }
 int main(){
