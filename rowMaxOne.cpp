@@ -20,6 +20,7 @@ int right_occur(int a[], int n){
     }
     return -1;
 }
+//O(m*n) - O(m*log n)
 int findRowWithMaxOne(int mat[][4], int m, int n){
     int ans = 0;
     int max_count = 0;
@@ -31,12 +32,11 @@ int findRowWithMaxOne(int mat[][4], int m, int n){
             count = 0;
         else
             count = count_right-count_left+1;
-        cout<<count<<" ";
         if(count>max_count){
             ans = i;
             max_count = count;
         }
-    }
+    } 
     cout<<max_count<<" ";
     return ans;
 }

@@ -1,6 +1,7 @@
 #include<iostream>
 #include<vector>
 using namespace std;
+//O(n) linear search
 vector<int> fLOccur(int a[], int n, int x){
     int start = -1, end = -1;
     for(int i=0; i<n; i++){
@@ -15,7 +16,7 @@ vector<int> fLOccur(int a[], int n, int x){
     r.push_back(end);
     return r;
 }
-//O(log n)
+//O(log n) binary search
 int first_occur(int a[], int n, int x){
     int l=0, r=n-1;
     while(l<=r){
@@ -26,6 +27,7 @@ int first_occur(int a[], int n, int x){
     }
     return -1;
 }
+//O(log n)
 int last_occur(int a[], int n, int x){
     int l=0, r=n-1;
     while(l<=r){
@@ -36,6 +38,7 @@ int last_occur(int a[], int n, int x){
     }
     return -1;
 }
+//O(log n)
 vector<int> fLOccur2(int a[], int n, int x){
     int r1 = first_occur(a, n, x);
     int r2 = last_occur(a, n, x);

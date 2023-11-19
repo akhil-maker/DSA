@@ -21,6 +21,6 @@ int last_occur(int a[], int n, int x){
     return -1;
 }
 int main(){
-    int a[] = {2, 3, 3, 4, 5, 5, 5, 5, 7, 9};
+    int a[] = {2, 3, 3, 4, 5, 5, 5, 5, 7, 9}; //sorted array
     cout<<(-first_occur(a, 10, 5)+last_occur(a, 10, 5)+1);
 }
